@@ -1,0 +1,8 @@
+.go-vue-skeleton.db
+build/
+node_modules
+dist
+*log
+data/migrate.go
+go-vue-skeleton/assets.go
+c.out
