@@ -76,3 +76,28 @@ A base target is available to compile the Go binary and execute it.
 
     make dev-be
 
+## notes
+
+For this skeleton project, there are no containers in use. This
+means that locally there are a few dependencies to be installed.
+
+1. Go
+2. Node.js (with Yarn)
+3. SQLite (assuming the database is kept)
+
+Of course, the database can be swapped out with library references
+replaced within the code.
+
+Intended outcome from this project is a single binary, preventing
+the need to have many dependent components installed on the target
+host. Using containers would be recommended for teams wishing to
+take this skeleton and collaborate. Many headaches are alleviated
+by doing so (or use linux as your development machine OS).
+
+During development, when running ``yarn serve`` alongside the Go
+binary, the ``./src/api.js`` axios client will require the
+``baseURL:`` value (as they will run on separate ports). Remove
+this ``baseURL:`` when releasing this or keep it and update if
+there will only be a single, known, domain used to serve from.
+The default value for this will be the current hostname
+including the port.
