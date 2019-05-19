@@ -5,6 +5,30 @@
 This project serves to be a skeleton for a SPA that utilises Vue.js
 for the FE and a Go API server underneath.
 
+## layout
+
+Several base concepts are at play in this skeleton, prepared with
+each of the accompanying commands to allow for a straight-to-dev
+process.
+
+When first using this skeleton, a full rename and text replace of
+``go-vue-skeleton`` to ``your-project-name`` kick-starts the process.
+With this completed, the binary that will inevitably be built will
+originate from the **main** package in ``./your-project-name``.
+
+The ``data`` directory contains the database interactions, including
+any migrations for managing the structure.
+
+Vue components and structure files sit within ``src``, including all
+other javascript. In this skeleton case, ``api.js`` is a file we use
+to make calls to our API server, with remaining files being a part
+of the Vue bootstrapping and usage process. To join with this, the
+``public/index.html`` file is used when building assets.
+
+In the root directory then, dependency and project configuration
+files are found. This means that all commands necessary to build
+and manage application components are run from the root directory.
+
 ## building
 
 ``go-bindata`` is required to load binary data into the Go context,
